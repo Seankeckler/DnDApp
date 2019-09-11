@@ -12535,27 +12535,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sean\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\katea\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\DnDApp\\DnDApp\\DnDApp.csproj",
+      "projectUniqueName": "F:\\DnDApp\\DnDApp\\DnDApp.csproj",
       "projectName": "DnDApp",
-      "projectPath": "D:\\Repos\\DnDApp\\DnDApp\\DnDApp.csproj",
-      "packagesPath": "C:\\Users\\Sean\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\DnDApp\\DnDApp\\obj\\",
+      "projectPath": "F:\\DnDApp\\DnDApp\\DnDApp.csproj",
+      "packagesPath": "C:\\Users\\katea\\.nuget\\packages\\",
+      "outputPath": "F:\\DnDApp\\DnDApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sean\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\katea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
