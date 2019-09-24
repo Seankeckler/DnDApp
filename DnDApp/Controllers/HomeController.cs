@@ -39,6 +39,13 @@ namespace DnDApp.Controllers
             return View();
         }
 
+        public IActionResult Spells()
+        {
+            ViewData["Message"] = "View Spells here";
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
