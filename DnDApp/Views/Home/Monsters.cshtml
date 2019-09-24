@@ -1,9 +1,14 @@
-﻿
-@{
-    foreach (var M in MonsterList)
-    {
+﻿@model IEnumerable<Monster>
 
+@{
+    //(System.Collections.Generic.List<string>)
+    List<String> Monsters = (System.Collections.Generic.List<string>)ViewData["MonsterNames"];
+    @foreach (var M in Monsters)
+    {
+        <h2>@M</h2>
     }
+    
+    
 }
 
    

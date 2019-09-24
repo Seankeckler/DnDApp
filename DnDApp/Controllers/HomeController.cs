@@ -15,7 +15,6 @@ namespace DnDApp.Controllers
     public class HomeController : Controller
     {
 
-        //have the monsters have a full stat card instead of entering the passive perception and stealth and other random stuff
         public IActionResult Index()
         {
             return View();
@@ -30,9 +29,8 @@ namespace DnDApp.Controllers
 
         public IActionResult Monsters()
         {
-
-            ViewData["Message"] = "Your application description page.";
-            
+            ViewData["MonsterNames"] = ReturnMonsterNames();
+            ViewData["MonsterUrls"] = ReturnMonsterUrls();
             return View();
         }
 
@@ -66,15 +64,46 @@ namespace DnDApp.Controllers
             Monsters.Add(Monster);
             return Monsters;
         }
-        public MonsterList()
+
+        public List<Monster> ListOfMonsters()
         {
-            
+            List<Monster> MonsterList = new List<Monster>();
             var Monsters = GetMonsters();
-            var Monsters= Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(Monster);
+            Monster AllTheMonsters = new Monster();
+
+            for (int i = 0; i < Monsters.Count(); i++)
+            {
+                foreach (var M in Monsters)
+                {
+                    AllTheMonsters.Name = M["results"][i]["name"].ToString();
+                    AllTheMonsters.Url = M["results"][i]["url"].ToString();
+                    MonsterList.Add(AllTheMonsters);
+                }
+            }
+            
+            return MonsterList;
+        }
+        public List<string> ReturnMonsterNames()
+        {
+            List<String> MonsterNames = new List<string>();
+            var Monsters = ListOfMonsters();
+            
             foreach (Monster M in Monsters)
             {
-                
+                MonsterNames.Add(M.Name);
             }
+            return MonsterNames;
+        }
+        public List<string> ReturnMonsterUrls()
+        {
+            List<String> MonsterUrls = new List<string>();
+            var Monsters = ListOfMonsters();
+            
+            foreach (Monster M in Monsters)
+            {
+                MonsterUrls.Add(M.Url);
+            }
+            return MonsterUrls;
         }
     }
 }
